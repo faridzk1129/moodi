@@ -12,20 +12,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const header = (
     <header className="p-4 sm:p-8 flex items-center justify-between gap-4">
-      <h1 className={"text-base sm:text-lg textGradient " + fugaz.className}>
-        Moodi
-      </h1>
+      <h1 className={"text-base sm:text-lg textGradient " + fugaz.className}>Moodi</h1>
+      <div className="flex items-center justify-between">PLACEHOLDER CTA | STATS</div>
     </header>
   );
-  const footer = <footer className="p-4 sm:py-8">footer</footer>;
+  const footer = (
+    <footer className="p-4 sm:py-8 flex justify-center ">
+      <p className={"text-indigo-500 font-normal " + fugaz.className}>created by faridzk🐾</p>
+    </footer>
+  );
 
   return (
     <html lang="en">
       <body
-        className={
-          "w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-700 " +
-          opensans.className
-        }
+        className={"w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-700 " + opensans.className}
       >
         {header}
         {children}

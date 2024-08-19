@@ -7,4 +7,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
- 
+
+.purpleShadow {
+  box-shadow: 3px 3px 1px 1px lavender;
+}
+
+.purpleShadow:hover {
+  transform: translate(3px, 3px);
+  -webkit-transform: translate(3px, 3px);
+  -moz-transform: translate(3px, 3px);
+  -ms-transform: translate(3px, 3px);
+  -o-transform: translate(3px, 3px);
+  box-shadow: 0px 0px 1px 1px lavender;
+}
+  
