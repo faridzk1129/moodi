@@ -2,6 +2,7 @@ import { Fugaz_One, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { AuthProvider } from "@/context/authContext";
+import Head from "./head";
 
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Head />
       <AuthProvider>
         <body
           className={

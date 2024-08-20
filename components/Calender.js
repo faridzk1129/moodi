@@ -1,5 +1,6 @@
-import { baseRating, gradients } from "@/utils";
-import React from "react";
+"use client";
+import { baseRating, demoData, gradients } from "@/utils";
+import React, { useState } from "react";
 
 const months = {
   January: "Jan",
@@ -19,28 +20,34 @@ const monthsArr = Object.keys(months);
 const now = new Date();
 const dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-export const data = {
-  15: 2,
-  16: 4,
-  17: 1,
-  18: 3,
-  19: 5,
-  20: 2,
-  21: 4,
-  22: 1,
-  23: 3,
-  24: 5,
-};
-
 export default function Calender(props) {
-  const demo = props;
-  const year = 2024;
-  const month = "October";
-  const monthNow = new Date(year, Object.keys(months).indexOf(month), 1);
+  const { demo, data, handleSetMood } = props;
+  const now = new Date();
+  const currMonth = now.getMonth();
+  const [selectedMonth, setSelectMonth] = useState(Object.keys(months)[currMonth]);
+  console.log(`selected month : ` + selectedMonth);
+  const [selectedYear, setSelectedYear] = useState(now.getFullYear())
+
+
+  // const year = 2024;
+  // const month = "October";
+
+  function handleIncrementMonth(val){
+    
+
+  }
+
+
+  const monthNow = new Date(selectedYear, Object.keys(months).indexOf(selectedMonth), 1);
+
   const firstDayOfMonth = monthNow.getDay();
-  const daysInMonth = new Date(year, Object.keys(month).indexOf(month) + 1, 0).getDate();
+
+  const daysInMonth = new Date(selectedYear, Object.keys(selectedMonth).indexOf(selectedMonth) + 1, 0).getDate();
+
   const daysToDisplay = firstDayOfMonth + daysInMonth;
+
   const numRows = Math.floor(daysToDisplay / 7) + (daysToDisplay % 7 ? 1 : 0);
+
   return (
     <div className="flex flex-col overflow-hidden gap-1 py-4 sm:py-6 md:py-10 ">
       {[...Array(numRows).keys()].map((row, rowIndex) => {
@@ -62,8 +69,8 @@ export default function Calender(props) {
               }
               let color = demo
                 ? gradients.indigo[baseRating[dayIndex]]
-                : dayIndex in data
-                ? gradients.indigo[data[dayIndex]]
+                : dayIndex in demoData
+                ? gradients.indigo[demoData[dayIndex]]
                 : "white";
 
               return (
