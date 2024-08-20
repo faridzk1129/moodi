@@ -23,7 +23,7 @@ export default function Dashboard() {
       for (let month in data[year]) {
         for (let day in data[year][month]) {
           let days_mood = data[year][month][day]
-          total_number_of_days++
+          total_number_of_days++ 
           sum_moods += days_mood
         }
       }
