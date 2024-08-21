@@ -141,13 +141,13 @@ export default function Dashboard() {
       <Calendar completeData={data} handleSetMood={handleSetMood} />
       <div className="bg-indigo-50 mx-auto rounded-lg text-md font-bold px-6 py-4 text-center text-indigo-500 relative -top-2">
         {average_mood >= 4 ? (
-          <h1 className={fugaz.className}>You're in great spirits! 🎉</h1>
+          <h1 className={fugaz.className}>You&apos;re in great spirits! 🎉</h1>
         ) : average_mood >= 3 ? (
           <h1 className={fugaz.className}>Keep the positivity flowing 🌟</h1>
         ) : average_mood >= 1 ? (
           <h1 className={fugaz.className}>Stay resilient, brighter days ahead 🌅</h1>
         ) : (
-          <h1 className={fugaz.className}>It's okay, tomorrow is a new day! 🔋</h1>
+          <h1 className={fugaz.className}>It&apos;s okay, tomorrow is a new day! 🔋</h1>
         )}
       </div>
     </div>
