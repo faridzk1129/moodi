@@ -17,14 +17,14 @@ export default function RootLayout({ children }) {
   const header = (
     <header className="p-4 sm:p-8 flex items-center justify-between gap-4">
       <Link href={"/"}>
-        <h1 className={"text-base sm:text-lg textGradient " + fugaz.className}>Broodl</h1>
+        <h1 className={"text-base sm:text-lg textGradient " + fugaz.className}>moodi</h1>
       </Link>
       <Logout />
     </header>
   );
   const footer = (
     <footer className="p-4 sm:py-8 flex justify-center ">
-      <p className={"text-indigo-500 font-normal " + fugaz.className}>created by 🐾</p>
+      <p className={"text-indigo-500 font-normal " + fugaz.className}>faridzk</p>
     </footer>
   );
 

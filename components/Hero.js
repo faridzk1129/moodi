@@ -14,7 +14,7 @@ export default function Hero() {
         <span className="textGradient">daily</span> mood!
       </h1>
       <p className="text-lg sm:text-xl md:text-2xl text-center w-full mx-auto max-w-[600px]">
-      record your moods and track your feelings {" "}
+        record your moods and track your feelings{" "}
         <span className="font-semibold">every day of every year.</span>
       </p>
       <CallToAction />

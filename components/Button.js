@@ -6,7 +6,7 @@ export default function Button(props) {
   const { text, dark, full, clickHandler } = props;
   return (
     <button
-    onClick={clickHandler}
+      onClick={clickHandler}
       className={
         "rounded-full overflow-hidden duration-200 hover:opacity-60 border border-indigo-600 " +
         (dark ? "text-white bg-indigo-600 border-indigo-600 " : "text-indigo-600") +
