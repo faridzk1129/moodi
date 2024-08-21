@@ -3,7 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import Head from "./head";
 import Logout from "@/components/Logout";
-import { AuthProvider } from "@/context/authContext";
+import { AuthProvider } from "@/context/AuthContext";
 
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
 const opensans = Open_Sans({ subsets: ["latin"] });

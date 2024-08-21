@@ -2,7 +2,7 @@
 import { Fugaz_One } from "next/font/google";
 import React, { useState } from "react";
 import Button from "./Button";
-import { useAuth } from "@/context/authContext";
+import { useAuth } from "@/context/AuthContext";
 
 const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
 

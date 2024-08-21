@@ -3,7 +3,7 @@ import React from "react";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useAuth } from "@/context/authContext";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Logout() {
   const { logout, currentUser } = useAuth();
