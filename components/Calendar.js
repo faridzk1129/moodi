@@ -68,7 +68,7 @@ export default function Calendar(props) {
           onClick={() => {
             handleIncrementMonth(-1);
           }}
-          className="mr-auto text-indigo-400 text-lg sm:text-xl duration-200 hover:opacity-60"
+          className="mr-auto text-indigo-400 text-xl md:text-2xl duration-200 hover:opacity-60"
         >
           <i className="fa-solid fa-circle-chevron-left"></i>
         </button>
@@ -83,7 +83,7 @@ export default function Calendar(props) {
           onClick={() => {
             handleIncrementMonth(+1);
           }}
-          className="ml-auto text-indigo-400 text-lg sm:text-xl duration-200 hover:opacity-60"
+          className="ml-auto text-indigo-400 text-xl md:text-2xl duration-200 hover:opacity-60"
         >
           <i className="fa-solid fa-circle-chevron-right"></i>
         </button>
